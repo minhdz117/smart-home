@@ -14,8 +14,8 @@ function textToCmt(text) {
     if (led.test(text)){cmt.thietbi="led"}
     if (on.test(text)){cmt.power="on"}
     if (off.test(text)){cmt.power="off"}
-    if (up.test(text)){cmt.lenh="up"}
-    if (down.test(text)){cmt.lenh="down"}
+    if (up.test(text)){cmt.updown="up"}
+    if (down.test(text)){cmt.updown="down"}
     if (hot.test(text)){
         cmt.hotcool="hot"
         cmt.thietbi="air"
@@ -30,5 +30,5 @@ function textToCmt(text) {
     }
     return cmt
 }
-
-console.log(textToCmt("bat dien"))
+module.exports={cmt}
+//console.log(textToCmt("bat dien"))
