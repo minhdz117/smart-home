@@ -1,5 +1,12 @@
 const request = require("request")
-const STT = require("../mp4_to_text/download")
+const STT = require("../mp4-to-text/download")
+const cmt = require("../comment-split/cmt")
+const control = require("../iot-control/control")
+
+var io
+function socketInit(ioIn) {
+  io=ioIn
+}
 
 function handleMessage(sender_psid, received_message) {
   let response;
@@ -66,4 +73,7 @@ function callSendAPI(sender_psid, response) {
 module.exports={
     handleMessage,
     handlePostback,
+    socketInit
 }
+
+// control.send( null,cmt.textToCmt("lam lanh nhanh"),null)
