@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-const led = JSON.parse(fs.readFileSync('c:/Users/MINH/Desktop/smart-home/src/iot-data/led.json'));
-const air = JSON.parse(fs.readFileSync('c:/Users/MINH/Desktop/smart-home/src/iot-data/air.json'));
+const led = JSON.parse(fs.readFileSync('c:/Users/Administrator/Desktop/smart-home/src/iot-data/led.json'));
+const air = JSON.parse(fs.readFileSync('c:/Users/Administrator/Desktop/smart-home/src/iot-data/air.json'));
 
 var ledStatus = { 
     "thietbi":"led",

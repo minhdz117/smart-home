@@ -13,6 +13,6 @@
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "request": "^2.88.2",
-    "socket.io": "1.0"
+    "socket.io": "2.0"
   }
 }

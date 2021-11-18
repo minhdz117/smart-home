@@ -2,6 +2,9 @@ require("dotenv").config("../../.env")
 const router = require("express").Router();
 const control=require("./mess-controller")
 
+router.get("/",(req,res)=>{
+  res.send("bot is active")
+})
 router.get("/webhook", (req, res) => {
   let VERIFY_TOKEN = process.env.PAGE_ACCESS_TOKEN;
   let mode = req.query["hub.mode"];

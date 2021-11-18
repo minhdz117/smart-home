@@ -1,6 +1,6 @@
 function textToCmt(text) {
     let cmt ={}
-    const air=/may lanh|dieu hoa/
+    const air=/May lanh|dieu hoa/
     const led=/den|dien/
     const on=/bat|lam/
     const off=/tat/
