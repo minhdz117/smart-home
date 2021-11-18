@@ -1,16 +1,16 @@
 function textToCmt(text) {
     let cmt ={}
-    const air=/May lanh|dieu hoa/
-    const led=/den|dien/
-    const on=/bat|lam/
-    const off=/tat/
-    const sleep=/ngu/
-    const up=/tang/
-    const down=/giam/
-    const heat=/nong|am/
-    const cool=/lanh|mat/
-    const tem=/ \d\d do/
-    const powerfull=/chay toi da|lam lanh nhanh/
+    const air=/Máy Lạnh|Điều hoà/
+    const led=/Đèn|Điện/
+    const on=/Bật|Làm/
+    const off=/Tắt/
+    const sleep=/Ngủ/
+    const up=/Tăng/
+    const down=/Giảm/
+    const heat=/Nóng|Ấm/
+    const cool=/Lạnh|Mát/
+    const tem=/ \d\d Độ/
+    const powerfull=/Chạy Tối Đa|Làm Lạnh Nhanh/
 
     if (air.test(text)){cmt.thietbi="air"}
     if (led.test(text)){cmt.thietbi="led"}
