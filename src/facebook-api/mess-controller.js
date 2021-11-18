@@ -17,14 +17,13 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   } else if (received_message.attachments) {
     let attachment_url = received_message.attachments[0].payload.url;
-    console.log(attachment_url)
     STT.get(attachment_url,text =>{
-      console.log(text)
+      control.send(io,cmt.textToCmt(text),null)
       response = {
         "text": `You sent the message: "${text}"`
       }
+      callSendAPI(sender_psid, response);
     })
-    callSendAPI(sender_psid, response);
   }
 }
 

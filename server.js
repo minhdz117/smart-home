@@ -7,6 +7,9 @@ const server = require('http').createServer(app);
 const io = require("socket.io")(server);
 
 FBcontrol.socketInit(io)
+io.on('connection', (socket) => {
+    console.log('a user connected');
+});
 app.use(express.json({'content-type':'application/json'}))
 app.use(express.urlencoded({ extended: false }))
 app.use("/",FBA)

@@ -1,6 +1,6 @@
 function textToCmt(text) {
     let cmt ={}
-    const air=/Máy Lạnh|Điều hoà/
+    const air=/máy lạnh|Điều hoà/
     const led=/Đèn|Điện/
     const on=/Bật|Làm/
     const off=/Tắt/

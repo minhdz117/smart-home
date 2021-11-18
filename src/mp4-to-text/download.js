@@ -11,7 +11,7 @@ function get(url, cb) {
         spawn("python", ["./src/mp4-to-text/main.py"]).stdout.on(
           "data",
           function (data) {
-            console.log(decodeURI(data));
+            cb(decodeURI(data));
           }
         );
       });

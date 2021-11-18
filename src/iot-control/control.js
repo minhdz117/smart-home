@@ -11,7 +11,7 @@ var ledStatus = {
 var airStatus = {
     "thietbi":"air",
     "power":"",
-    "tem":"",
+    "tem":"23",
     "hotcool":"cool"
 }
 
@@ -19,6 +19,7 @@ function send (io,cmt,cb) {
     if (cmt["thietbi"]=="led"|cmt["power"]=="sleep"){
         if (cmt.power){
             io.sockets.emit("led",led[cmt.power])
+            console.log(led[cmt.power])
             ledStatus.power=cmt.power
             if (cmt.power=="on"){
                 ledStatus.lever=6
@@ -53,7 +54,6 @@ function send (io,cmt,cb) {
             airStatus.power=cmt.power
         }
     } 
-    //io.sockets.emit()
 }
 
 module.exports={
