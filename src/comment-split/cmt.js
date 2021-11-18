@@ -11,7 +11,7 @@ function textToCmt(text) {
     const heat=/nóng|ấm/
     const cool=/lạnh|mát/
     const tem=/ \d\d Độ/
-    const powerfull=/Chạy Tối Đa|Làm Lạnh Nhanh/
+    const powerfull=/chạy tối đa|làm lạnh nhanh/
 
     if (air.test(text)){cmt.thietbi="air"}
     if (led.test(text)){cmt.thietbi="led"}
