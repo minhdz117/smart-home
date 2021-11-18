@@ -1,14 +1,15 @@
 function textToCmt(text) {
+    text=text.toLocaleLowerCase
     let cmt ={}
-    const air=/máy lạnh|Điều hoà/
-    const led=/Đèn|Điện/
-    const on=/Bật|Làm/
-    const off=/Tắt/
-    const sleep=/Ngủ/
-    const up=/Tăng/
-    const down=/Giảm/
-    const heat=/Nóng|Ấm/
-    const cool=/Lạnh|Mát/
+    const air=/máy lạnh|điều hoà/
+    const led=/đèn|điện/
+    const on=/bật|làm/
+    const off=/tắt/
+    const sleep=/ngủ/
+    const up=/tăng/
+    const down=/giảm/
+    const heat=/nóng|ấm/
+    const cool=/lạnh|mát/
     const tem=/ \d\d Độ/
     const powerfull=/Chạy Tối Đa|Làm Lạnh Nhanh/
 
